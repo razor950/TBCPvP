@@ -38,6 +38,7 @@ file(GLOB_RECURSE sources_Maps Maps/*.cpp Maps/*.h)
 file(GLOB_RECURSE sources_Miscellaneous Miscellaneous/*.cpp Miscellaneous/*.h)
 file(GLOB_RECURSE sources_Movement Movement/*.cpp Movement/*.h)
 file(GLOB_RECURSE sources_OutdoorPvP OutdoorPvP/*.cpp OutdoorPvP/*.h)
+file(GLOB_RECURSE sources_Pathfinding Pathfinding/*.cpp Pathfinding/*.h)
 file(GLOB_RECURSE sources_Pools Pools/*.cpp Pools/*.h)
 file(GLOB_RECURSE sources_Quests Quests/*.cpp Quests/*.h)
 file(GLOB_RECURSE sources_Scripting Scripting/*.cpp Scripting/*.h)
@@ -49,8 +50,8 @@ file(GLOB_RECURSE sources_Tools Tools/*.cpp Tools/*.h)
 file(GLOB_RECURSE sources_Tickets Tickets/*.cpp Tickets/*.h)
 file(GLOB_RECURSE sources_Warden Warden/*.cpp Warden/*.h)
 file(GLOB_RECURSE sources_Weather Weather/*.cpp Weather/*.h)
+file(GLOB_RECURSE sources_WhoList WhoList/*.cpp WhoList/*.h)
 file(GLOB_RECURSE sources_World World/*.cpp World/*.h)
-file(GLOB_RECURSE sources_Pathfinding Pathfinding/*.cpp Pathfinding/*.h)
 
 source_group(CMake FILES CMakeLists.txt)
 source_group(Accounts FILES ${sources_Accounts})
@@ -89,6 +90,7 @@ source_group(Tools FILES ${sources_Tools})
 source_group(Tickets FILES ${sources_Tickets})
 source_group(Warden FILES ${sources_Warden})
 source_group(Weather FILES ${sources_Weather})
+source_group(WhoList FILES ${sources_WhoList})
 source_group(World FILES ${sources_World})
 source_group(Pathfinding FILES ${sources_Pathfinding})
 
@@ -138,6 +140,7 @@ set(game_STAT_SRCS
   ${sources_Tickets}
   ${sources_Warden}  
   ${sources_Weather}
+  ${sources_WhoList}
   ${sources_World}
   ${sources_Pathfinding}
 )
@@ -226,6 +229,7 @@ include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}/Tickets
   ${CMAKE_CURRENT_SOURCE_DIR}/Warden  
   ${CMAKE_CURRENT_SOURCE_DIR}/Weather
+  ${CMAKE_CURRENT_SOURCE_DIR}/WhoList
   ${CMAKE_CURRENT_SOURCE_DIR}/World
   ${CMAKE_CURRENT_SOURCE_DIR}/Pathfinding
   ${CMAKE_SOURCE_DIR}/src/server/scripts/PrecompiledHeaders
